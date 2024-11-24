@@ -5,13 +5,13 @@ function PromotionalBanner() {
   return (
     <div className="container px-4 py-12">
       <div className="relative rounded-lg overflow-hidden bg-[#EEECFB] flex items-center justify-between">
-        <div className="space-y-1">
+        <div className="space-y-6">
           <div className="flex flex-row mx-10 items-center gap-2">
             <p className="text-5xl font-bold text-purple-600 whitespace-nowrap">
-              30% 
+              30%
             </p>
             <p className="text-5xl font-bold text-black whitespace-nowrap">
-            Off for New Customers
+              Off for New Customers
             </p>
           </div>
 
@@ -40,7 +40,6 @@ function PromotionalBanner() {
             width={550}
             height={695}
             objectFit="cover"
-            
           />
         </div>
       </div>

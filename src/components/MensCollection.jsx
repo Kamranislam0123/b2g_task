@@ -4,8 +4,27 @@ import React from "react";
 function MensCollection() {
   return (
     <div className="container px-4 py-12">
-      <div className="relative rounded-lg overflow-hidden bg-[#EEECFB] flex items-center justify-between">
-        <div className="space-y-1">
+      <div className="relative rounded-lg overflow-hidden flex items-center justify-start gap-10">
+        {/* Image Section with 70% Background Height */}
+        <div className="hidden md:block relative">
+          <div className="relative overflow-hidden h-[600px]">
+            {/* Background */}
+            <div className="absolute bottom-0 left-0 w-full h-[80%] bg-[#EEECFB] z-0"></div>
+            {/* Image */}
+            <Image
+              src="/mens collection.png"
+              alt="Promotional Image"
+              width={550}
+              height={695}
+              objectFit="cover"
+              objectPosition="top"
+              className="relative z-10"
+            />
+          </div>
+        </div>
+
+        {/* Text Section */}
+        <div className="space-y-6">
           <div className="flex flex-row mx-10 items-center gap-2">
             <p className="text-5xl font-bold text-black whitespace-nowrap">
               MEN COLLECTION
@@ -13,7 +32,7 @@ function MensCollection() {
           </div>
 
           <div className="flex flex-row items-center justify-start mx-10 gap-1">
-            <button className="bg-[#8F71E1]  text-white font-bold py-3 px-6 rounded-3xl">
+            <button className="bg-[#8F71E1] text-white font-bold py-3 px-6 rounded-3xl">
               Shop Now
             </button>
             <button className="flex items-center justify-center rounded-full bg-[#8F71E1] w-[48px] h-[48px]">
@@ -29,15 +48,6 @@ function MensCollection() {
               </svg>
             </button>
           </div>
-        </div>
-        <div className="hidden md:block relative">
-          <Image
-            src="/mens collection.png"
-            alt="Promotional Image"
-            width={550}
-            height={695}
-            objectFit="cover"
-          />
         </div>
       </div>
     </div>

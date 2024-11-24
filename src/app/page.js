@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <>
       <div className="container mx-auto">
-        <div className='flex flex-col'>
+        <div className='flex flex-col bg-[#F5F3FF]'>
           
           <HeroSection />
           <ServiceFeatures/>
@@ -25,8 +25,7 @@ export default function Home() {
           <PromotionalBanner />
           <MensCollection />
           <SummerDeals/>
-          
-          <NewsletterSignup />
+          {/* <NewsletterSignup /> */}
         </div>
       </div>
     </>
