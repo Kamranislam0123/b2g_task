@@ -15,7 +15,10 @@ module.exports = {
       },
       container: {
         center: true, // Centers the container
-        
+       
+      },
+      fontFamily: {
+        sans: ["var(--font-manrope)", "sans-serif"], // Set as default font
       },
     },
   },

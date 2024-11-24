@@ -1,26 +1,26 @@
-import React from 'react';
+import React from "react";
 
 function ProductCard({ title, price, imageUrl, rating, reviews, discount }) {
-    return (
-        <div className="relative border rounded-lg overflow-hidden">
-            {discount && (
-                <div className="absolute top-2 right-2 bg-purple-600 text-white px-2 py-1 rounded-md text-sm">
-                    {discount}
-                </div>
-            )}
-            <div className="aspect-square relative">
-                <img
-                    src={imageUrl}
-                    alt={title}
-                    className="object-cover w-full h-full"
-                />
-            </div>
-            <div className="p-4">
-                <div className="flex items-center gap-4 w-full">
-                    <h3 className="font-medium text-sm">{title}</h3>
-                    <div className="ml-auto font-bold">BOT {price.toLocaleString()}</div>
-                </div>
-                {rating && (
+  return (
+    <div className="relative border rounded-lg overflow-hidden">
+      {discount && (
+        <div className="absolute top-2 right-2 bg-purple-600 text-white px-2 py-1 rounded-md text-sm">
+          {discount}
+        </div>
+      )}
+      <div className="aspect-square relative bg-[#F6F5FD] m-2 rounded-lg">
+        <img
+          src={imageUrl}
+          alt={title}
+          className="object-cover w-full h-full"
+        />
+      </div>
+      <div className="p-4">
+        <div className="flex items-center gap-4 w-full">
+          <h3 className="font-medium text-base">{title}</h3>
+          <div className="ml-auto font-bold">BDT {price.toLocaleString()}</div>
+        </div>
+        {/* {rating && (
                     <div className="flex items-center gap-1 mt-2">
                         {[...Array(5)].map((_, i) => (
                             <svg
@@ -40,14 +40,13 @@ function ProductCard({ title, price, imageUrl, rating, reviews, discount }) {
                         ))}
                         {reviews && <span className="text-sm text-gray-500">({reviews})</span>}
                     </div>
-                )}
-                <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded mt-4">
-                    Add to Cart
-                </button>
-            </div>
-        </div>
-    );
+                )} */}
+        <button className="w-full border border-[#7E53D4] hover:bg-purple-700 text-[#7E53D4] hover:text-white  font-bold py-2 px-4 rounded mt-4">
+          Add to cart
+        </button>
+      </div>
+    </div>
+  );
 }
 
 export default ProductCard;
-

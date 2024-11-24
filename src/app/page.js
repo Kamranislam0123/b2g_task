@@ -5,6 +5,7 @@ import NewsletterSignup from './../components/NewsletterSignup';
 import NewArrivalCard from '@/components/NewArrivalCard';
 import SummerDeals from '@/components/SummerDeals';
 import { ServiceFeatures } from '@/components/ServiceFeatures';
+import MensCollection from '@/components/MensCollection';
 
 
 
@@ -21,8 +22,10 @@ export default function Home() {
           <HeroSection />
           <ServiceFeatures/>
           <NewArrivalCard/>
-          <SummerDeals/>
           <PromotionalBanner />
+          <MensCollection />
+          <SummerDeals/>
+          
           <NewsletterSignup />
         </div>
       </div>
