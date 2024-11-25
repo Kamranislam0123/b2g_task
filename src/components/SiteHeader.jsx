@@ -54,10 +54,15 @@ function SiteHeader() {
               className="px-2 py-2 flex-1 outline-none"
             />
           </form>
-          <button className="p-2">
+          <button className="p-2 relative">
             <span className="sr-only">Shopping Cart</span>
             <ShoppingBag />
+            {/* Notification Badge */}
+            <span className="absolute top-0 right-0 inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-black rounded-full">
+              1
+            </span>
           </button>
+
           <button className="p-2">
             <span className="sr-only">User Account</span>
             <User />
@@ -69,7 +74,11 @@ function SiteHeader() {
             className="md:hidden p-2"
             aria-label="Toggle Mobile Menu"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
       </div>

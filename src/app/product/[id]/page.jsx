@@ -6,6 +6,7 @@ import { Star, ChevronLeft, ChevronRight, Minus, Plus } from "lucide-react";
 import { useParams } from "next/navigation"; // Import useParams from next/navigation
 import { useEffect, useState } from "react";
 import "ldrs/ripples";
+import { ShoppingBagButton } from "@/components/ShoppingBag";
 
 // Import newArrivals or wherever your data is stored
 
@@ -65,8 +66,8 @@ const ProductDetail = () => {
 
   if (!product) {
     return (
-      <div>
-        <l-cardio size="50" stroke="4" speed="2" color="black"></l-cardio>
+      <div className="flex items-center justify-center h-screen">
+        <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-purple-500"></div>
       </div>
     );
   }
@@ -145,18 +146,17 @@ const ProductDetail = () => {
               ))}
             </div>
             <span className="text-sm text-gray-600">
-              {ratingCounts[product.rating]}
+              ({ratingCounts[product.rating]})
             </span>
-            <span className="text-sm text-purple-600">
-              {" "}
+            <span className="text-sm text-purple-600 font-bold">
               {product.reviews} Reviews
             </span>
           </div>
 
-          <div className="text-2xl font-bold"> BDT{product.price}</div>
+          <div className="text-2xl font-bold">BDT {product.price}</div>
 
-          <div className="space-y-4 py-8 border-y-2 ">
-            <div className="flex gap-4">
+          <div className="space-y-4 py-8 border-y-2">
+            <div className="flex flex-col gap-4 md:flex-row">
               <div className="flex-1">
                 <h3 className="font-medium mb-4">Available Size</h3>
                 <div className="flex gap-2">
@@ -165,8 +165,8 @@ const ProductDetail = () => {
                       key={size}
                       className={`px-4 py-2 rounded ${
                         selectedSize === size
-                          ? "bg-purple-600 text-white"
-                          : "border border-gray-300"
+                          ? "bg-transparent text-[#7E53D4] border border-[#7E53D4]"
+                          : "text-[#7E53D4]"
                       }`}
                       onClick={() => setSelectedSize(size)}
                     >
@@ -174,9 +174,15 @@ const ProductDetail = () => {
                     </button>
                   ))}
                 </div>
+                {selectedSize && (
+                  <p className="mt-2 text-sm text-gray-600">
+                    Selected Size:{" "}
+                    <span className="font-medium">{selectedSize}</span>
+                  </p>
+                )}
               </div>
 
-              <div className="flex-1 items-center">
+              <div className="flex-1">
                 <h3 className="font-medium mb-6">Available Color</h3>
                 <div className="flex gap-4">
                   {colors.map((color) => (
@@ -192,11 +198,22 @@ const ProductDetail = () => {
                     />
                   ))}
                 </div>
+                {selectedColor && (
+                  <p className=" text-sm pt-4 text-gray-600">
+                    Selected Color:{" "}
+                    <span className="font-medium">{selectedColor}</span>
+                  </p>
+                )}
+              </div>
+
+              <div class="pl-4">
+                <ShoppingBagButton itemCount={0} />
               </div>
             </div>
           </div>
+
           <div>
-            <h3 className="font-medium py-5 ">Quantity</h3>
+            <h3 className="font-medium py-5">Quantity</h3>
             <div className="flex items-center gap-4">
               <button
                 className="p-2 border rounded"
@@ -204,7 +221,7 @@ const ProductDetail = () => {
               >
                 <Minus className="h-4 w-4" />
               </button>
-              <span className="w-12 text-center">{quantity}</span>
+              <span className="w-8 text-center">{quantity}</span>
               <button
                 className="p-2 border rounded"
                 onClick={() => setQuantity((q) => q + 1)}
@@ -409,7 +426,7 @@ const ProductDetail = () => {
           )}
         </div>
       </div>
-      <NewArrivalCard  />
+      <NewArrivalCard />
     </div>
   );
 };
