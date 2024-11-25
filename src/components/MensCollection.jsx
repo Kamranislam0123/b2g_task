@@ -4,10 +4,10 @@ import React from "react";
 function MensCollection() {
   return (
     <div className="container px-4 py-12">
-      <div className="relative rounded-lg overflow-hidden flex items-center justify-start gap-10">
-        {/* Image Section with 70% Background Height */}
-        <div className="hidden md:block relative">
-          <div className="relative overflow-hidden h-[600px]">
+      <div className="relative rounded-lg overflow-hidden flex flex-col md:flex-row items-center justify-center md:items-start gap-10">
+        {/* Image Section */}
+        <div className="relative md:w-auto">
+          <div className="relative overflow-hidden h-[300px] md:h-[600px]">
             {/* Background */}
             <div className="absolute bottom-0 left-0 w-full h-[80%] bg-[#EEECFB] z-0"></div>
             {/* Image */}
@@ -18,20 +18,20 @@ function MensCollection() {
               height={695}
               objectFit="cover"
               objectPosition="top"
-              className="relative z-10"
+              className="relative z-10 mx-auto"
             />
           </div>
         </div>
 
         {/* Text Section */}
-        <div className="space-y-6">
-          <div className="flex flex-row mx-10 items-center gap-2">
-            <p className="text-5xl font-bold text-black whitespace-nowrap">
+        <div className="flex flex-col space-y-6 items-center justify-center text-center md:items-start md:justify-center h-full md:h-[600px]">
+          <div className="flex flex-row items-center justify-center md:justify-start gap-2">
+            <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-black whitespace-nowrap">
               MEN COLLECTION
             </p>
           </div>
 
-          <div className="flex flex-row items-center justify-start mx-10 gap-1">
+          <div className="flex flex-row items-start justify-start gap-1">
             <button className="bg-[#8F71E1] text-white font-bold py-3 px-6 rounded-3xl">
               Shop Now
             </button>

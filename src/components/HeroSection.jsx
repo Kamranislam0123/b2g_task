@@ -3,8 +3,8 @@ import Image from "next/image";
 
 function HeroSection() {
   return (
-    <div className="relative h-[500px] w-full  flex items-center justify-center bg-gray-100 overflow-hidden">
-      {/* Background Image */}
+    <div className="relative h-[500px] w-full flex items-center justify-center bg-gray-100 overflow-hidden">
+      {/* Background Image with Lazy Loading */}
       <div className="absolute inset-0">
         <Image
           src="/hero.png"
@@ -12,7 +12,8 @@ function HeroSection() {
           layout="fill"
           objectFit="cover"
           objectPosition="top"
-          priority
+          priority={false} // Disable priority to avoid blocking other content
+          loading="lazy" // Enable lazy loading
         />
       </div>
 
@@ -23,7 +24,7 @@ function HeroSection() {
           Discover the Latest Trends in Sustainable Fashion
         </p>
         <div className="flex flex-row items-center justify-center gap-1">
-          <button className="bg-[#8F71E1]  text-white font-bold py-3 px-6 rounded-3xl">
+          <button className="bg-[#8F71E1] text-white font-bold py-3 px-6 rounded-3xl">
             Shop Now
           </button>
           <button className="flex items-center justify-center rounded-full bg-[#8F71E1] w-[48px] h-[48px]">

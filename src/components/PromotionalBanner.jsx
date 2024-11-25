@@ -4,19 +4,22 @@ import React from "react";
 function PromotionalBanner() {
   return (
     <div className="container px-4 py-12">
-      <div className="relative rounded-lg overflow-hidden bg-[#EEECFB] flex items-center justify-between">
-        <div className="space-y-6">
-          <div className="flex flex-row mx-10 items-center gap-2">
-            <p className="text-5xl font-bold text-purple-600 whitespace-nowrap">
+      <div className="relative rounded-lg overflow-hidden bg-[#EEECFB] flex flex-col md:flex-row items-center justify-between">
+        {/* Text and Button Section */}
+        <div className="space-y-6 md:space-y-6 md:w-1/2 px-4 text-center  md:text-left">
+          {/* Headline */}
+          <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-2">
+            <p className="text-3xl  sm:text-4xl md:text-5xl font-bold text-purple-600 whitespace-nowrap">
               30%
             </p>
-            <p className="text-5xl font-bold text-black whitespace-nowrap">
+            <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-black whitespace-nowrap">
               Off for New Customers
             </p>
           </div>
 
-          <div className="flex flex-row items-center justify-start mx-10 gap-1">
-            <button className="bg-[#8F71E1]  text-white font-bold py-3 px-6 rounded-3xl">
+          {/* Buttons */}
+          <div className="flex flex-row  items-start justify-center md:sm:justify-start  gap-1">
+            <button className="bg-[#8F71E1] text-white font-bold py-3 px-6 rounded-3xl">
               Shop Now
             </button>
             <button className="flex items-center justify-center rounded-full bg-[#8F71E1] w-[48px] h-[48px]">
@@ -33,7 +36,20 @@ function PromotionalBanner() {
             </button>
           </div>
         </div>
-        <div className="hidden md:block relative">
+
+        {/* Image Section for medium and larger screens */}
+        <div className="hidden md:block relative md:w-1/2">
+          <Image
+            src="/banner1.png"
+            alt="Promotional Image"
+            width={550}
+            height={695}
+            objectFit="cover"
+          />
+        </div>
+
+        {/* Image Section for small screens */}
+        <div className="md:hidden relative w-full mt-6">
           <Image
             src="/banner1.png"
             alt="Promotional Image"

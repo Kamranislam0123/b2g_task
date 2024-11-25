@@ -38,11 +38,11 @@ export function ServiceFeatures() {
       <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-purple-700 opacity-90"></div>
 
       {/* Content */}
-      <div className="relative container mx-auto px-4 py-6 flex items-center justify-center h-full">
-        <div className="flex flex-row items-center gap-6 text-white">
+      <div className="relative container mx-auto px-4 py-6 flex items-start justify-center h-full">
+        <div className="flex flex-col md:flex-row items-start md:items-start gap-6 text-white">
           {features.map((feature, index) => (
-            <div key={index} className="flex items-start gap-4">
-              <feature.icon className="w-8 h-8  flex-shrink-0" />
+            <div key={index} className="flex items-start gap-4 md:w-1/3">
+              <feature.icon className="w-8 h-8 flex-shrink-0" />
               <div className="space-y-2">
                 <h3 className="font-semibold">{feature.title}</h3>
                 <p className="text-xs text-white/90">{feature.description}</p>
