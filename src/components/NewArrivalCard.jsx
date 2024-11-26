@@ -10,7 +10,8 @@ export const newArrivals = [
     id: 1,
     title: "Indian Shawl",
     price: 2300,
-    imageUrl: "/Sharee.png",
+    imageUrl:
+      "https://res.cloudinary.com/djamytvej/image/upload/v1732591225/Bg_task/Sharee_mch089.png",
     rating: 4,
     reviews: 12,
   },
@@ -18,7 +19,8 @@ export const newArrivals = [
     id: 2,
     title: "Hoodie",
     price: 2300,
-    imageUrl: "/hoodie.png",
+    imageUrl:
+      "https://res.cloudinary.com/djamytvej/image/upload/v1732591227/Bg_task/hoodie_n04od8.png",
     rating: 5,
     reviews: 8,
   },
@@ -26,7 +28,8 @@ export const newArrivals = [
     id: 3,
     title: "Palazzo",
     price: 2300,
-    imageUrl: "/plazoo.png",
+    imageUrl:
+      "https://res.cloudinary.com/djamytvej/image/upload/v1732591225/Bg_task/plazoo_kqeju2.png",
     rating: 4,
     reviews: 15,
   },
@@ -34,7 +37,8 @@ export const newArrivals = [
     id: 4,
     title: "Jacket",
     price: 2300,
-    imageUrl: "/jacket.png",
+    imageUrl:
+      "https://res.cloudinary.com/djamytvej/image/upload/v1732592629/Bg_task/jacket_re5wge.png",
     rating: 4,
     reviews: 10,
   },

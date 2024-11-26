@@ -40,7 +40,7 @@ function PromotionalBanner() {
         {/* Image Section for medium and larger screens */}
         <div className="hidden md:block relative md:w-1/2">
           <Image
-            src="/banner1.png"
+            src="https://res.cloudinary.com/djamytvej/image/upload/v1732591225/Bg_task/banner1_ofkzbo.png"
             alt="Promotional Image"
             width={550}
             height={695}

@@ -7,7 +7,7 @@ function HeroSection() {
       {/* Background Image with Lazy Loading */}
       <div className="absolute inset-0">
         <Image
-          src="/hero.png"
+          src="https://res.cloudinary.com/djamytvej/image/upload/v1732591235/Bg_task/hero_dfqwfw.png"
           alt="Hero Background"
           layout="fill"
           objectFit="cover"

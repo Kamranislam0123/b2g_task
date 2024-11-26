@@ -12,7 +12,7 @@ function MensCollection() {
             <div className="absolute bottom-0 left-0 w-full h-[80%] bg-[#EEECFB] z-0"></div>
             {/* Image */}
             <Image
-              src="/mens collection.png"
+              src="https://res.cloudinary.com/djamytvej/image/upload/v1732591229/Bg_task/mens_collection_urjsc2.png"
               alt="Promotional Image"
               width={550}
               height={695}
